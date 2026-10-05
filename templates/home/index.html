@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{% static 'images/logo.png' %}" alt="QA Portfolio Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Professional Experience</a></li>
+                <li class="nav-item"><a href="#tests" class="nav-link">Test Automation</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle">QA | V&V TESTING | TEST AUTOMATION</p>
+                <h1>Hi there, I'm João Matos.</h1>
+                <p class="hero-description">ISTQB® Certified Test Engineer with expertise in manual testing and test automation across different industries. Passionate about quality assurance and creating robust test automation frameworks. Welcome to my portfolio!</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">View My Work</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'images/profile.png' %}" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm João Filipe Matos. I live in the interior of Portugal in Fundão—a place I've called home for most of my life because of its slower-paced lifestyle and close connection to nature.</p>
+                <br>
+                <p>If you looked at my resume a few years ago, you'd see a degree in Tourism and a background in customer service. While I enjoyed the dynamic of working with the public, I craved a career path with more robust technical growth. Combined with my natural obsession with details and tech, that drive led me to shift my career into software engineering in my late 20s.</p>
+                
+                <p>It turned out to be the right move. Today, I work as a consultant test engineer, helping international teams deliver reliable software across diverse industries like telecom and automotive. I finally found something I love doing every day, and I'm always looking for the next technical challenge to tackle.</p>
+                <br>
+                <p>So far, I've worked in both manual and automation testing with very diverse teams, and I can confidently say that I thrive in projects where quality and communication are front and center. My background in customer service gave me a unique perspective on client dedication, teaching me that true quality means strong communication, high efficiency, and delivering real value.</p>
+                
+                <p>That is why I thrive with agile methodologies and love leveraging AI as a tool to boost delivery efficiency, assist with research, and streamline processes.</p>
+                <br>
+                <p><strong>If you are looking for a test engineer with expertise in test automations, AI ready, detail oriented and a team player, feel free to reach out!</strong></p>
+            </div>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary">Let's Talk</button>
+                </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">🤖</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-card experience-card-tech">
+                            <!-- Left side tech logos -->
+                            <div class="tech-logo-group tech-logos-left">
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/robot-framework.png' %}" alt="Robot Framework">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/selenium.png' %}" alt="Selenium">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/playwright.png' %}" alt="Playwright">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/postman.png' %}" alt="Postman">
+                                </div>
+                            </div>
+
+                            <!-- Right side tech logos -->
+                            <div class="tech-logo-group tech-logos-right">
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/xray.png' %}" alt="Xray">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/postgresql.png' %}" alt="PostgreSQL">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/jira.png' %}" alt="Jira">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/gitlab.png' %}" alt="GitLab">
+                                </div>
+                                <div class="tech-logo-item">
+                                    <img src="{% static 'images/github-copilot.png' %}" alt="GitHub Copilot">
+                                </div>
+                            </div>
+
+                            <div class="experience-header">
+                                <h3>Software QA & Automation Engineer</h3>
+                                <span class="experience-date">May 2024 - Present</span>
+                            </div>
+                            <p class="experience-company">Capgemini Engineering – Fundão</p>
+                            <ul class="experience-details">
+                                <li>Worked across different industries, with big and small teams, as well as different testing tools and frameworks</li>
+                                <li>Manual test writing and execution as well as bug and test reports (Jira Xray, Agile methodologies, test writing, test executions, bug reports)</li>
+                                <li>Test automation and test regression with Robot Framework and libraries for backend and frontend testing (Selenium, Requests)</li>
+                                <li>Experienced in the automotive industry in testing embedded and infotainment systems (Vector CANoe)</li>
+                                <li>API backend testing with automation in telecommunications industry (Postman, Bruno, PostgreSQL, Cassandra, Oracle DB, API testing)</li>
+                                <li>Testing using AI as a tool/peer to improve delivery time and quality to the client (Gitlab, Github Copilot, Rovo)</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">Test Automation</span>
+                                <span class="tag">API Testing</span>
+                                <span class="tag">Automotive</span>
+                                <span class="tag">TelCo</span>
+                                <span class="tag">AI-assisted</span>
+                                <span class="tag">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">💼</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Front Desk / Administrative</h3>
+                                <span class="experience-date">April 2021 - October 2023</span>
+                            </div>
+                            <p class="experience-company">Smile Up Dental Clinics – Covilhã</p>
+                            <ul class="experience-details">
+                                <li>Tasks related to sales/commercial work and front office work</li>
+                                <li>Planning marketing strategies with main focus on fieldmarketing</li>
+                                <li>Supporting the manager in some administrative and commercial tasks</li>
+                                <li>Sales and financial credit for treatment plans</li>
+                                <li>Also gained experience as a user in Salesforce CRM for healthcare industry</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">Sales</span>
+                                <span class="tag">Marketing</span>
+                                <span class="tag">Salesforce CRM</span>
+                                <span class="tag">Administrative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-icon">✈️</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Tourism Technician</h3>
+                                <span class="experience-date">October 2016 - March 2020</span>
+                            </div>
+                            <p class="experience-company">Freelancer – Municipality of Fundão</p>
+                            <ul class="experience-details">
+                                <li>Freelanced as a tour guide for the municipality of Fundão</li>
+                                <li>Managed tourist offices for the county</li>
+                                <li>Organized and conducted tour guides in English and Portuguese</li>
+                                <li>Event planning for major cultural events</li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">Tour Guide</span>
+                                <span class="tag">Tourism</span>
+                                <span class="tag">Event Planning</span>
+                                <span class="tag">Multilingual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Automation Section -->
+    <section id="tests" class="test-automation">
+        <div class="container">
+            <h2>Test Automation Showcase</h2>
+            <div class="tests-placeholder">
+                <p>Test cases and automation examples will be showcased here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaborating? Feel free to reach out!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 QA Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/spider-effect.js' %}"></script>
+</body>
+</html>
