@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=4">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,9 +18,8 @@
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Professional Experience</a></li>
-                <li class="nav-item"><a href="#tests" class="nav-link">Test Automation</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+                <li class="nav-item"><a href="#education" class="nav-link">Education &amp; Skills</a>                </li>
+                            </ul>
         </div>
     </nav>
 
@@ -32,7 +31,14 @@
                 <h1>Hi there, I'm João Matos.</h1>
                 <p class="hero-description">ISTQB® Certified Test Engineer with expertise in manual testing and test automation across different industries. Passionate about quality assurance and creating robust test automation frameworks. Welcome to my portfolio!</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary">View My Work</button>
+                    <a href="{% static 'documents/Joao_Matos_CV.pdf' %}" class="btn btn-primary btn-icon" download="Joao_Matos_CV.pdf">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/joaofilipesmatos/" class="btn btn-secondary btn-icon" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -60,7 +66,13 @@
                 <p><strong>If you are looking for a test engineer with expertise in test automations, AI ready, detail oriented and a team player, feel free to reach out!</strong></p>
             </div>
                 <div class="cta-buttons">
-                    <button class="btn btn-secondary">Let's Talk</button>
+                    <div class="talk-wrapper">
+                        <button class="btn btn-secondary" id="talk-btn" aria-expanded="false" aria-controls="talk-email">Let's Talk</button>
+                        <div class="talk-reveal" id="talk-email">
+                            <span class="talk-line"></span>
+                            <span class="talk-email-box">joaofilipesmatos@gmail.com</span>
+                        </div>
+                    </div>
                 </div>
         </div>
     </section>
@@ -72,7 +84,7 @@
             <div class="experience-timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <span class="timeline-icon">🤖</span>
+                        <span class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
                     </div>
                     <div class="timeline-content">
                         <div class="experience-card experience-card-tech">
@@ -138,7 +150,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <span class="timeline-icon">💼</span>
+                        <span class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
                     </div>
                     <div class="timeline-content">
                         <div class="experience-card">
@@ -166,7 +178,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <span class="timeline-icon">✈️</span>
+                        <span class="timeline-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                     </div>
                     <div class="timeline-content">
                         <div class="experience-card">
@@ -194,29 +206,93 @@
         </div>
     </section>
 
-    <!-- Test Automation Section -->
-    <section id="tests" class="test-automation">
-        <div class="container">
-            <h2>Test Automation Showcase</h2>
-            <div class="tests-placeholder">
-                <p>Test cases and automation examples will be showcased here.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Education, Certifications & Skills Section -->
+    <section id="education" class="education">
+        <div class="education-container">
+            <h2>Education, Certifications &amp; Skills</h2>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Interested in collaborating? Feel free to reach out!</p>
+            <h3 class="edu-group-title">Education &amp; Certifications</h3>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                    <h4>University of Évora</h4>
+                    <span class="edu-date">2013 - 2016</span>
+                    <p class="edu-subtitle">Degree in Tourism</p>
+                    <ul class="edu-list">
+                        <li>Event planning, hospitality, management, economy, customer service</li>
+                    </ul>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
+                    <h4>Polytechnic Institute of Guarda</h4>
+                    <span class="edu-date">2023 - 2024</span>
+                    <p class="edu-subtitle">Upskill Digital Skills &amp; Jobs – Python Programming</p>
+                    <ul class="edu-list">
+                        <li>Python, Django, SQL, Git, testing, web development</li>
+                    </ul>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+                    <h4>PSTQB – Portuguese Association of Software Testing</h4>
+                    <span class="edu-date">ISTQB® Certified</span>
+                    <p class="edu-subtitle">Certified Tester Foundation Level (CTFL)</p>
+                    <ul class="edu-list">
+                        <li>Manual testing, testing principles, testing foundations, test strategies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="edu-group-title">Other Skills</h3>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                    <h4>Languages</h4>
+                    <ul class="edu-list">
+                        <li>Portuguese (Native)</li>
+                        <li>English C1</li>
+                        <li>Spanish B1</li>
+                        <li>French A2</li>
+                    </ul>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    <h4>Soft Skills</h4>
+                    <ul class="edu-list">
+                        <li>Team player</li>
+                        <li>Organization</li>
+                        <li>Communication within a team</li>
+                        <li>Adaptability</li>
+                        <li>Problem-solving</li>
+                    </ul>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></span>
+                    <h4>Other Interests</h4>
+                    <ul class="edu-list">
+                        <li>Travelling (also available for work purposes)</li>
+                        <li>True crime documentaries</li>
+                        <li>Cinema</li>
+                        <li>Books</li>
+                        <li>Music & live shows</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 QA Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 QA Portfolio - João Filipe Matos. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('talk-btn').addEventListener('click', function () {
+            const reveal = document.getElementById('talk-email');
+            const show = !reveal.classList.contains('open');
+            reveal.classList.toggle('open', show);
+            this.setAttribute('aria-expanded', show);
+        });
+    </script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/spider-effect.js' %}"></script>
 </body>
